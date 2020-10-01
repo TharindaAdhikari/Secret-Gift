@@ -6,21 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".SellerRegistrationActivity">
 
-    <LinearLayout
-        android:layout_width="410dp"
-        android:layout_height="850dp"
-
-        android:background="#000000"/>
 
     <ImageView
         android:id="@+id/register_applogo"
-        android:layout_width="match_parent"
-        android:layout_height="132dp"
+        android:layout_width="wrap_content"
+        android:layout_height="163dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="22dp"
-        android:layout_marginEnd="-6dp"
-        android:src="@drawable/logonew" />
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="-1dp"
+        android:background="@drawable/sellersign" />
 
 
 
@@ -33,7 +28,7 @@
         android:textSize="20dp"
         android:layout_marginLeft="19dp"
         android:layout_marginTop="190dp"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/primary_text_light_nodisable"
         />
 
     <EditText
@@ -42,14 +37,14 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/register_applogo"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="56dp"
         android:layout_marginRight="15dp"
         android:background="@drawable/input_design"
         android:hint="User Name"
         android:inputType="text"
         android:padding="14sp"
-        android:textColor="@android:color/white"
-        android:textColorHint="#8BFFFFFF"
+        android:textColor="#000000"
+        android:textColorHint="#8B000000"
         android:textSize="17sp"
         android:textStyle="bold" />
 
@@ -65,8 +60,8 @@
         android:hint="Password"
         android:inputType="textPassword"
         android:padding="14sp"
-        android:textColor="@android:color/white"
-        android:textColorHint="#8BFFFFFF"
+        android:textColor="#000000"
+        android:textColorHint="#8B000000"
         android:textSize="17sp"
         android:textStyle="bold" />
 
@@ -82,8 +77,8 @@
         android:hint="E-mail"
         android:inputType="text"
         android:padding="14sp"
-        android:textColor="@android:color/white"
-        android:textColorHint="#8BFFFFFF"
+        android:textColor="#000000"
+        android:textColorHint="#8B000000"
         android:textSize="17sp"
         android:textStyle="bold" />
 
@@ -99,8 +94,8 @@
         android:hint="Phone Number"
         android:inputType="number"
         android:padding="14sp"
-        android:textColor="@android:color/white"
-        android:textColorHint="#8BFFFFFF"
+        android:textColor="#000000"
+        android:textColorHint="#8B000000"
         android:textSize="17sp"
         android:textStyle="bold" />
 
@@ -116,8 +111,8 @@
         android:hint="Address"
         android:inputType="text"
         android:padding="14sp"
-        android:textColor="@android:color/white"
-        android:textColorHint="#8BFFFFFF"
+        android:textColor="#000000"
+        android:textColorHint="#8B000000"
         android:textSize="17sp"
         android:textStyle="bold"
 
