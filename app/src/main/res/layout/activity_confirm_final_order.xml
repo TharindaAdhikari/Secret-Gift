@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fff"
+    tools:context=".ConfirmFinalOrderActivity">
+
+    <TextView
+        android:id="@+id/txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please Enter Your Gift Reciever's Shipment Details"
+        android:textSize="25dp"
+        android:textColor="@android:color/white"
+        android:layout_margin="25dp"
+        android:textAlignment="center"
+        android:fontFamily="serif-monospace"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:id="@+id/shippment_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Gift Reciever's Name"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        />
+    <EditText
+        android:id="@+id/shippment_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shippment_name"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Special Occasion Date "
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        />
+
+    <EditText
+        android:id="@+id/shippment_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shippment_date"
+        android:inputType="number"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Your Phone Number"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        />
+
+    <EditText
+        android:id="@+id/shippment_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shippment_phone_number"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Gift Reciever's Home Address"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        />
+
+
+    <EditText
+        android:id="@+id/shippment_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shippment_address"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Special Occasion"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        />
+
+    <EditText
+        android:id="@+id/wishing_name"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/shippment_city"
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Enter Your Wishing Note"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        />
+
+    <Button
+        android:id="@+id/confirm_final_order_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:text="Confirm"
+        android:background="@drawable/buttons"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:fontFamily="serif-monospace"
+        />
+
+
+</RelativeLayout>
