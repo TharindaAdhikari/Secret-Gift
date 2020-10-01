@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SellerCategoryActivity">
+
+    <TextView
+        android:id="@+id/slogan_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="- ADD NEW PRODUCT -"
+        android:textColor="@color/colorPrimaryDark"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:fontFamily="serif-monospace"
+        android:textStyle="bold"
+        />
+
+    <LinearLayout
+        android:id="@+id/linear1_category_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/slogan_category"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:background="@drawable/input_design"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/clothes"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/clothes"
+            />
+        <ImageView
+            android:id="@+id/choco"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/chocolate"
+            />
+        <ImageView
+            android:id="@+id/cake"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/cake"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear2_category_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear1_category_layout"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:background="@drawable/input_design"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <ImageView
+            android:id="@+id/toy"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/toys"
+            />
+        <ImageView
+            android:id="@+id/perfume"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/perfume"
+            />
+        <ImageView
+            android:id="@+id/watch"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/watch"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear3_category_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear2_category_layout"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:background="@drawable/input_design"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <ImageView
+            android:id="@+id/mobile_phones"
+            android:layout_width="75dp"
+            android:layout_height="100dp"
+            android:src="@drawable/phone"
+            />
+
+        <ImageView
+            android:id="@+id/fresh_flowers"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/fresh_flowers"
+            />
+        <ImageView
+            android:id="@+id/shoes"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/shoes"
+            />
+    </LinearLayout>
+
+</RelativeLayout>
