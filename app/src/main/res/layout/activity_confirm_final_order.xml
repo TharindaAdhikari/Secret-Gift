@@ -11,7 +11,7 @@
         android:id="@+id/txt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Please Enter Your Gift Reciever's Shipment Details"
+        android:text="Please Enter Your Gift Reciever Shipment Details"
         android:textSize="25dp"
         android:textColor="@android:color/white"
         android:layout_margin="25dp"
