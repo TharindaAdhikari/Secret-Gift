@@ -10,14 +10,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.myapplication.Model.Products;
 import com.example.myapplication.ViewHolder.ItemViewHolder;
+import com.example.myapplication.ViewHolder.ProductViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -27,6 +22,19 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import io.paperdb.Paper;
 
 public class SellerHomeActivity extends AppCompatActivity {
 
@@ -42,7 +50,7 @@ public class SellerHomeActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
+                    //mTextMessage.setText(R.string.title_home);
                     return true;
                 case R.id.navigation_add:
                     Intent intent = new Intent(SellerHomeActivity.this, SellerCategoryActivity.class);
@@ -68,11 +76,7 @@ public class SellerHomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seller_home);
-        //BottomNavigationView navView = findViewById(R.id.nav_view);
 
-        //FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        //transaction.replace(R.id.content, FirstFragment.newInstance("What","Ever"));
-        //transaction.commit();
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.nav_view);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
@@ -93,7 +97,7 @@ public class SellerHomeActivity extends AppCompatActivity {
         super.onStart();
 
         FirebaseRecyclerOptions<Products> options = new FirebaseRecyclerOptions.Builder<Products>().setQuery(unverifiedProductRef.orderByChild("sid")
-                .equalTo("1234"), Products.class).build();
+                .equalTo("1234"),Products.class).build();
 
         FirebaseRecyclerAdapter<Products, ItemViewHolder>adapter = new FirebaseRecyclerAdapter<Products, ItemViewHolder>(options) {
             @Override
@@ -148,7 +152,7 @@ public class SellerHomeActivity extends AppCompatActivity {
         unverifiedProductRef.child(productID).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
-                Toast.makeText(SellerHomeActivity.this, "That item has been Deleted Successfully..", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SellerHomeActivity.this, "That Item has been Deleted Successfully", Toast.LENGTH_SHORT).show();
             }
         });
     }
