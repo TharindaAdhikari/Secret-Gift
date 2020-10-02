@@ -11,7 +11,7 @@
         android:id="@+id/txt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Please Enter Your Gift Reciever's Shipment Details"
+        android:text="Please Enter Gift Reciever's Shipment Details"
         android:textSize="25dp"
         android:textColor="@android:color/white"
         android:layout_margin="25dp"
@@ -28,7 +28,7 @@
         android:layout_marginTop="50dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:hint="Gift Reciever's Name"
+        android:hint="Gift Reciever's Name..."
         android:textColorHint="@android:color/white"
         android:textColor="@android:color/white"
         />
@@ -40,7 +40,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:hint="Special Occasion Date "
+        android:hint="Special Occasion Date... "
         android:textColorHint="@android:color/white"
         android:textColor="@android:color/white"
         />
@@ -54,7 +54,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:hint="Your Phone Number"
+        android:hint="Your Phone Number..."
         android:textColorHint="@android:color/white"
         android:textColor="@android:color/white"
         />
@@ -67,7 +67,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:hint="Gift Reciever's Home Address"
+        android:hint="Gift Reciever's Home Address..."
         android:textColorHint="@android:color/white"
         android:textColor="@android:color/white"
         />
@@ -81,7 +81,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:hint="Special Occasion"
+        android:hint="Special Occasion..."
         android:textColorHint="@android:color/white"
         android:textColor="@android:color/white"
         />
@@ -94,7 +94,7 @@
         android:layout_marginTop="45dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:hint="Enter Your Wishing Note"
+        android:hint="Enter Your Wishing Note..."
         android:textColorHint="@android:color/white"
         android:textColor="@android:color/white"
         />
