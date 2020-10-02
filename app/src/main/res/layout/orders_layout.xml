@@ -84,16 +84,15 @@
             android:id="@+id/show_all_products_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:text="Show This Order Products"
-            android:textColor="@android:color/white"
-            android:textSize="20dp"
-            android:background="@drawable/buttons"
             android:layout_below="@+id/order_date_time"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/buttons"
             android:fontFamily="serif-monospace"
-            />
+            android:text="Show This Order Gifts"
+            android:textColor="@android:color/white"
+            android:textSize="20dp" />
 
     </RelativeLayout>
 
