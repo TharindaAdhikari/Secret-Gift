@@ -68,23 +68,28 @@ public class SellerRegistrationActivity extends AppCompatActivity {
         String address = sInputAddress.getText().toString();
 
         if(TextUtils.isEmpty(name)){
+            sInputName.setError("Name Required");
             Toast.makeText(this,"Please Enter your name",Toast.LENGTH_SHORT).show();
         }
         else if(TextUtils.isEmpty(phone)){
+            sInputPhoneNumber.setError("Please Enter Valid Phone Number");
             Toast.makeText(this,"Please Enter your phone number",Toast.LENGTH_SHORT).show();
         }
         else if(TextUtils.isEmpty(password)){
+            sInputPassword.setError("Please Enter Strong Password");
             Toast.makeText(this,"Please Enter your password",Toast.LENGTH_SHORT).show();
         }
         else if(TextUtils.isEmpty(email)){
-            Toast.makeText(this,"Please Enter your Email",Toast.LENGTH_SHORT).show();
+            sInputEmail.setError("Email Required");
+            Toast.makeText(this,"Please Enter Your Email",Toast.LENGTH_SHORT).show();
         }
-        else if(TextUtils.isEmpty(password)){
+        else if(TextUtils.isEmpty(address)){
+            sInputAddress.setError("Address Required");
             Toast.makeText(this,"Please Enter your Address",Toast.LENGTH_SHORT).show();
         }
         else{
             loadingBar.setTitle("Create Account");
-            loadingBar.setMessage("Please wait, while we are checking the credentials.");
+            loadingBar.setMessage("Please wait, while We Are Checking The Credentials");
             loadingBar.setCanceledOnTouchOutside(false);
             loadingBar.show();
 
@@ -112,7 +117,7 @@ public class SellerRegistrationActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if(task.isSuccessful()){
-                                Toast.makeText(SellerRegistrationActivity.this, "Congratulations, your account has been created.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(SellerRegistrationActivity.this, "Congratulations, Your Account Has Been Created", Toast.LENGTH_SHORT).show();
                                 loadingBar.dismiss();
 
                                 Intent intent = new Intent(SellerRegistrationActivity.this, SellerLoginActivity.class);
@@ -120,7 +125,7 @@ public class SellerRegistrationActivity extends AppCompatActivity {
                             }
                             else{
                                 loadingBar.dismiss();
-                                Toast.makeText(SellerRegistrationActivity.this, "Network Error: Please try again after some time...", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(SellerRegistrationActivity.this, "Network Error: Please try again after Few time", Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
@@ -129,7 +134,7 @@ public class SellerRegistrationActivity extends AppCompatActivity {
                 {
                     Toast.makeText(SellerRegistrationActivity.this, "Your" + name + "Already exists.", Toast.LENGTH_SHORT).show();
                     loadingBar.dismiss();
-                    Toast.makeText(SellerRegistrationActivity.this, "Please try again, using another Name", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SellerRegistrationActivity.this, "Please Try Again, Using Another Name", Toast.LENGTH_SHORT).show();
 
                     Intent intent = new Intent(SellerRegistrationActivity.this, MainActivity.class);
                     startActivity(intent);

@@ -50,7 +50,7 @@ public class SellerHomeActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                   // mTextMessage.setText(R.string.title_home);
+                    //mTextMessage.setText(R.string.title_home);
                     return true;
                 case R.id.navigation_add:
                     Intent intent = new Intent(SellerHomeActivity.this, SellerCategoryActivity.class);
@@ -76,11 +76,7 @@ public class SellerHomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seller_home);
-        //BottomNavigationView navView = findViewById(R.id.nav_view);
 
-        //FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        //transaction.replace(R.id.content, FirstFragment.newInstance("What","Ever"));
-        //transaction.commit();
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.nav_view);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
@@ -156,7 +152,7 @@ public class SellerHomeActivity extends AppCompatActivity {
         unverifiedProductRef.child(productID).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
-                Toast.makeText(SellerHomeActivity.this, "That item has been Deleted Successfully..", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SellerHomeActivity.this, "That Item has been Deleted Successfully", Toast.LENGTH_SHORT).show();
             }
         });
     }

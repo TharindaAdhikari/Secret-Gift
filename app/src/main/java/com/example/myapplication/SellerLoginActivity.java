@@ -51,15 +51,17 @@ public class SellerLoginActivity extends AppCompatActivity {
         String password = sInputPassword.getText().toString();
 
         if(TextUtils.isEmpty(name)){
+            sInputName.setError("Name Required");
             Toast.makeText(this,"Please Enter Your User Name",Toast.LENGTH_SHORT).show();
         }
         else if(TextUtils.isEmpty(password)){
+            sInputPassword.setError("Please Enter Strong Password");
             Toast.makeText(this,"Please Enter Your Password",Toast.LENGTH_SHORT).show();
         }
         else
         {
             loadingBar.setTitle("Login Account");
-            loadingBar.setMessage("Please wait, while we are checking the credentials");
+            loadingBar.setMessage("Please Wait, while We Are Checking The Credentials");
             loadingBar.setCanceledOnTouchOutside(false);
             loadingBar.show();
 
@@ -98,7 +100,7 @@ public class SellerLoginActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    Toast.makeText(SellerLoginActivity.this, "Account with this" + name + "User Name Do Not Exists", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SellerLoginActivity.this, "Account With This" + name + "User Name Do Not Exists", Toast.LENGTH_SHORT).show();
                     loadingBar.dismiss();
                 }
             }

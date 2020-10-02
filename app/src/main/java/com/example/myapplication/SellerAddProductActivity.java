@@ -44,10 +44,9 @@ public class SellerAddProductActivity extends AppCompatActivity {
     private Uri ImageUri;
     private String productRandomKey, downloadImageUrl;
     private StorageReference ProductImagesRef;
-    private DatabaseReference ProductsRef, sellersRef;
+    private DatabaseReference ProductsRef;
     private ProgressDialog loadingBar;
 
-    //private String sName, sAddress, sPhone, sEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +56,7 @@ public class SellerAddProductActivity extends AppCompatActivity {
         CategoryName = getIntent().getExtras().get("category").toString();
         ProductImagesRef = FirebaseStorage.getInstance().getReference().child("Product Images");
         ProductsRef = FirebaseDatabase.getInstance().getReference().child("Products");
-        //sellersRef = FirebaseDatabase.getInstance().getReference().child("Sellers");
+
 
         AddNewProductButton = (Button) findViewById(R.id.add_new_product);
         InputProductImage = (ImageView) findViewById(R.id.select_product_image);
@@ -81,23 +80,6 @@ public class SellerAddProductActivity extends AppCompatActivity {
         });
 
 
-//        sellersRef.child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-//                .addValueEventListener(new ValueEventListener() {
-//                    @Override
-//                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//                       if (dataSnapshot.exists()){
-//                           sName = dataSnapshot.child("name").getValue().toString();
-//                           sAddress = dataSnapshot.child("address").getValue().toString();
-//                           sPhone = dataSnapshot.child("phone").getValue().toString();
-//                           sEmail = dataSnapshot.child("email").getValue().toString();
-//                        }
-//                    }
-//
-//                    @Override
-//                    public void onCancelled(@NonNull DatabaseError databaseError) {
-//
-//                    }
-//                });
 
     }
 
@@ -124,16 +106,16 @@ public class SellerAddProductActivity extends AppCompatActivity {
         Pname = InputProductName.getText().toString();
 
         if(ImageUri == null){
-            Toast.makeText(this, "Product image is mandatory...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Product Image Is Mandatory", Toast.LENGTH_SHORT).show();
         }
         else if(TextUtils.isEmpty(Description)){
-            Toast.makeText(this, "Please write product description...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please Enter product Description", Toast.LENGTH_SHORT).show();
         }
         else if(TextUtils.isEmpty(Price)){
-            Toast.makeText(this, "Please enter product price...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please Enter Product Price", Toast.LENGTH_SHORT).show();
         }
         else if(TextUtils.isEmpty(Pname)){
-            Toast.makeText(this, "Please write product name...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please Enter Product Name", Toast.LENGTH_SHORT).show();
         }
         else{
             StoreProductInformation();
@@ -143,7 +125,7 @@ public class SellerAddProductActivity extends AppCompatActivity {
     private void StoreProductInformation() {
 
         loadingBar.setTitle("Adding New Product");
-        loadingBar.setMessage("Dear Seller, Please wait while we are checking the new product.");
+        loadingBar.setMessage("Dear Seller, Please wait while We Are Checking The New Product.");
         loadingBar.setCanceledOnTouchOutside(false);
         loadingBar.show();
 
@@ -171,7 +153,7 @@ public class SellerAddProductActivity extends AppCompatActivity {
         }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                Toast.makeText(SellerAddProductActivity.this, "Product Image Uploaded Successfully..", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SellerAddProductActivity.this, "Product Image Uploaded Successfully", Toast.LENGTH_SHORT).show();
 
                 Task<Uri> urlTask = uploadTask.continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
                     @Override
@@ -189,7 +171,7 @@ public class SellerAddProductActivity extends AppCompatActivity {
 
                             downloadImageUrl = task.getResult().toString();
 
-                            Toast.makeText(SellerAddProductActivity.this, "got the Product image url successfully.. ", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SellerAddProductActivity.this, "got the Product image url successfully", Toast.LENGTH_SHORT).show();
 
                             SaveProductInfoToDatabase();
                         }
@@ -210,9 +192,7 @@ public class SellerAddProductActivity extends AppCompatActivity {
         productMap.put("price", Price);
         productMap.put("pname", Pname);
 
-//        productMap.put("sellerAddress", sAddress);
-//        productMap.put("sellerPhone", sPhone);
-//        productMap.put("sellerEmail", sEmail);
+
         productMap.put("productState", "Not Approved");
         productMap.put("sid", "1234");
 
@@ -224,7 +204,7 @@ public class SellerAddProductActivity extends AppCompatActivity {
                     startActivity(intent);
 
                     loadingBar.dismiss();
-                    Toast.makeText(SellerAddProductActivity.this, "Product is added successfully...", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SellerAddProductActivity.this, "Product Is Added Successfully", Toast.LENGTH_SHORT).show();
                 }
                 else{
                     loadingBar.dismiss();

@@ -6,102 +6,116 @@
     android:layout_height="match_parent"
     tools:context=".SellerRegistrationActivity">
 
+
     <ImageView
         android:id="@+id/register_applogo"
-        android:layout_width="300dp"
-        android:layout_height="100dp"
-        android:src="@drawable/secgift"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"/>
+        android:layout_width="wrap_content"
+        android:layout_height="163dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="-1dp"
+        android:background="@drawable/sellersign" />
+
+
+
+    <TextView
+        android:id="@+id/register_here"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register Here!!"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="190dp"
+        android:textColor="@android:color/primary_text_light_nodisable"
+        />
 
     <EditText
         android:id="@+id/sregister_username_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/register_applogo"
-        android:background="@drawable/input_design"
-        android:padding="20sp"
         android:layout_marginLeft="15dp"
+        android:layout_marginTop="56dp"
         android:layout_marginRight="15dp"
-        android:layout_marginTop="6dp"
+        android:background="@drawable/input_design"
         android:hint="User Name"
         android:inputType="text"
-        android:textColor="@color/colorPrimaryDark"
-        android:textColorHint="@color/colorPrimaryDark"
+        android:padding="14sp"
+        android:textColor="#000000"
+        android:textColorHint="#8B000000"
         android:textSize="17sp"
-        android:textStyle="bold"
-        />
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/sregister_password_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/sregister_username_input"
-        android:background="@drawable/input_design"
-        android:padding="20sp"
+        android:layout_alignParentTop="true"
         android:layout_marginLeft="15dp"
+        android:layout_marginTop="280dp"
         android:layout_marginRight="15dp"
-        android:layout_marginTop="6dp"
+        android:background="@drawable/input_design"
         android:hint="Password"
         android:inputType="textPassword"
-        android:textColor="@color/colorPrimaryDark"
-        android:textColorHint="@color/colorPrimaryDark"
+        android:padding="14sp"
+        android:textColor="#000000"
+        android:textColorHint="#8B000000"
         android:textSize="17sp"
-        android:textStyle="bold"
-        />
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/sregister_email_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/sregister_password_input"
-        android:background="@drawable/input_design"
-        android:padding="20sp"
         android:layout_marginLeft="15dp"
+        android:layout_marginTop="8dp"
         android:layout_marginRight="15dp"
-        android:layout_marginTop="6dp"
+        android:background="@drawable/input_design"
         android:hint="E-mail"
         android:inputType="text"
-        android:textColor="@color/colorPrimaryDark"
-        android:textColorHint="@color/colorPrimaryDark"
+        android:padding="14sp"
+        android:textColor="#000000"
+        android:textColorHint="#8B000000"
         android:textSize="17sp"
-        android:textStyle="bold"
-        />
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/sregister_phone_number_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/sregister_email_input"
-        android:background="@drawable/input_design"
-        android:padding="20sp"
         android:layout_marginLeft="15dp"
+        android:layout_marginTop="8dp"
         android:layout_marginRight="15dp"
-        android:layout_marginTop="6dp"
+        android:background="@drawable/input_design"
         android:hint="Phone Number"
         android:inputType="number"
-        android:textColor="@color/colorPrimaryDark"
-        android:textColorHint="@color/colorPrimaryDark"
+        android:padding="14sp"
+        android:textColor="#000000"
+        android:textColorHint="#8B000000"
         android:textSize="17sp"
-        android:textStyle="bold"
-        />
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/sregister_address_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/sregister_phone_number_input"
-        android:background="@drawable/input_design"
-        android:padding="20sp"
         android:layout_marginLeft="15dp"
+        android:layout_marginTop="8dp"
         android:layout_marginRight="15dp"
-        android:layout_marginTop="6dp"
+        android:background="@drawable/input_design"
         android:hint="Address"
         android:inputType="text"
-        android:textColor="@color/colorPrimaryDark"
-        android:textColorHint="@color/colorPrimaryDark"
+        android:padding="14sp"
+        android:textColor="#000000"
+        android:textColorHint="#8B000000"
         android:textSize="17sp"
         android:textStyle="bold"
+
         />
 
     <Button
@@ -109,33 +123,33 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/sregister_password_input"
-        android:layout_marginTop="220dp"
         android:layout_marginLeft="15dp"
+        android:layout_marginTop="199dp"
         android:layout_marginRight="15dp"
-        android:background="@drawable/buttons"
-        android:padding="20dp"
-        android:textAllCaps="false"
-        android:textSize="22sp"
+        android:background="@drawable/sellerbtn1"
+        android:padding="15dp"
         android:text="Create Account"
+        android:textAllCaps="false"
         android:textColor="@android:color/white"
-        />
+        android:textSize="22sp" />
 
     <Button
         android:id="@+id/main_seller_login_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:background="@drawable/buttons"
-        android:padding="20dp"
-        android:textAllCaps="false"
-        android:textSize="18sp"
         android:layout_alignParentBottom="true"
-        android:text="Already have an Account? LogIn"
-        android:textColor="@android:color/white"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="23dp"
+        android:background="@drawable/sellerbtn2"
         android:fontFamily="serif-monospace"
-        />
+        android:padding="17dp"
+        android:text="Already have an Account? Login"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
 
 </RelativeLayout>
