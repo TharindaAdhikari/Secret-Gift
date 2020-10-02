@@ -1,17 +1,18 @@
 package com.example.myapplication;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 public class SellerCategoryActivity extends AppCompatActivity {
 
     private ImageView clothes, chocolate, cake, freshFlowers;
     private ImageView toys, perfume, watch, shoes;
     private ImageView mobilePhones;
+    private ImageView ring,bracelet,mug;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,11 @@ public class SellerCategoryActivity extends AppCompatActivity {
         shoes = (ImageView) findViewById(R.id.shoes);
 
         mobilePhones = (ImageView) findViewById(R.id.mobile_phones);
+
+        ring = (ImageView) findViewById(R.id.ring);
+        bracelet = (ImageView) findViewById(R.id.bracelet);
+        mug = (ImageView) findViewById(R.id.mug);
+
 
         clothes.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,6 +113,33 @@ public class SellerCategoryActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(SellerCategoryActivity.this, SellerAddProductActivity.class);
                 intent.putExtra("category", "mobilePhones");
+                startActivity(intent);
+            }
+        });
+
+        ring.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SellerCategoryActivity.this, SellerAddProductActivity.class);
+                intent.putExtra("category", "Rings");
+                startActivity(intent);
+            }
+        });
+
+        bracelet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SellerCategoryActivity.this, SellerAddProductActivity.class);
+                intent.putExtra("category", "Bracelet");
+                startActivity(intent);
+            }
+        });
+
+        mug.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SellerCategoryActivity.this, SellerAddProductActivity.class);
+                intent.putExtra("category", "Mug");
                 startActivity(intent);
             }
         });
