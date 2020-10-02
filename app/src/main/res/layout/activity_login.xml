@@ -84,7 +84,7 @@
             android:textColor="@android:color/white"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:layout_marginLeft="100dp"
+            android:layout_marginLeft="85dp"
             android:fontFamily="serif-monospace"
 
             />
@@ -118,7 +118,7 @@
         android:textSize="21sp"
         android:textStyle="bold"
         android:layout_marginLeft="100dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginEnd="25dp"
         android:fontFamily="serif-monospace"
         />
 
