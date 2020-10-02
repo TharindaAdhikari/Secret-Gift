@@ -164,7 +164,7 @@ public class CartActivity extends AppCompatActivity {
                         recyclerView.setVisibility(View.GONE);
 
                         txtMsg1.setVisibility(View.VISIBLE);
-                        txtMsg1.setText("Congratulations, Your final order has been shipped successfully. Soon you will received your order at your door step.");
+                        txtMsg1.setText("Congratulations, Your final orderd gifts has been shipped to your loved ones successfully. Soon he/she will received your order at her/his door step.");
                         NextProcessBtn.setVisibility(View.GONE);
 
                         Toast.makeText(CartActivity.this, "you can purchase more products, once you recived your first final order.", Toast.LENGTH_SHORT).show();
