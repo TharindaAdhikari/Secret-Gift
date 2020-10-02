@@ -102,7 +102,7 @@
         android:padding="20dp"
         android:textAllCaps="false"
         android:textSize="30sp"
-        android:text="Log In"
+        android:text="LogIn"
         android:textColor="@android:color/white"
         android:fontFamily="serif-monospace"
         />
@@ -118,7 +118,7 @@
         android:textSize="21sp"
         android:textStyle="bold"
         android:layout_marginLeft="100dp"
-        android:layout_marginEnd="23dp"
+        android:layout_marginEnd="30dp"
         android:fontFamily="serif-monospace"
         />
 
